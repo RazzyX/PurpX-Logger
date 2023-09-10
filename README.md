@@ -1,6 +1,7 @@
 # PurpX Logger
 
-# ![lol (1)](https://github.com/RazzyX/PurpX-Logger/assets/144582854/836624b3-baed-4203-9b1e-dec610c3d15d)
+# ![lol (1)](https://github.com/RazzyX/PurpX-Logger/assets/144582854/2710a17d-3cbb-4dac-9336-7f993e9268e0)
+
 
 
 
