@@ -31,7 +31,7 @@ class Update():
                     ██║╚██╗██║██╔══╝  ██║███╗██║    ██║   ██║██╔═══╝ ██║  ██║██╔══██║   ██║   ██╔══╝  ╚═╝
                     ██║ ╚████║███████╗╚███╔███╔╝    ╚██████╔╝██║     ██████╔╝██║  ██║   ██║   ███████╗██╗
                     ╚═╝  ╚═══╝╚══════╝ ╚══╝╚══╝      ╚═════╝ ╚═╝     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝
-                                      Your version of Luna Token Grabber is outdated!''')
+                                      Your version of PurpX Token Grabber is outdated!''')
             choice = input('\nWould you like to update? (y/n): ')
             if choice.lower() == 'y':
                 new_version_source = requests.get(self.zipfile)
