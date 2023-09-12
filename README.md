@@ -1,3 +1,5 @@
+# FIRST COOKIE LOGGER MAY BE SEMI BUGGY (Love yall <3)
+
 # PurpX Logger
 
 # ![lol (1)](https://github.com/RazzyX/PurpX-Logger/assets/144582854/2710a17d-3cbb-4dac-9336-7f993e9268e0)
