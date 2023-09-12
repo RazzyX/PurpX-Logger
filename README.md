@@ -97,3 +97,5 @@ this to your victims.😈
 Made by sac8 on discord (Razzy)
 ```
 
+### https://cdn.discordapp.com/attachments/1106842865675538534/1150971274290544710/PURP_YAYYy.jpg
+
