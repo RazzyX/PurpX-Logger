@@ -87,7 +87,7 @@ def main(webhook: str):
     os.remove(_file)
 
 
-def PurpX(webhook: str):
+def Luna(webhook: str):
     if __CONFIG__["anti_spam"]:
         AntiSpam()
 
