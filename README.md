@@ -1,4 +1,3 @@
-# FIRST COOKIE LOGGER MAY BE SEMI BUGGY (Love yall <3)
 
 # PurpX Logger
 
